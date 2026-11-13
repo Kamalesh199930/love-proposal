@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { Heart, Sparkles, Stars, PartyPopper, RefreshCw } from 'lucide-react';
+import { Heart, Sparkles, PartyPopper, RefreshCw, Crown } from 'lucide-react';
 import Fireworks from './Fireworks';
 import BirthdayCake from './BirthdayCake';
 
@@ -39,7 +39,7 @@ export default function CelebrationPage({ onReset }) {
   }, []);
 
   return (
-    <div className="relative min-h-[100dvh] flex flex-col items-center justify-center px-3 sm:px-4 py-5 sm:py-8 z-10 overflow-x-hidden selection:bg-rose-200">
+    <div className="relative min-h-[100dvh] flex flex-col items-center justify-center px-3 sm:px-4 py-4 sm:py-7 z-10 overflow-x-hidden selection:bg-rose-200">
       {/* Background Fireworks */}
       <Fireworks />
 
@@ -50,64 +50,37 @@ export default function CelebrationPage({ onReset }) {
       </div>
 
       {/* Celebration Header Content */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.92, y: -15 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center max-w-2xl w-full z-20"
-      >
+      <div className="text-center max-w-2xl w-full z-20">
         {/* Floating Celebration Badges */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/90 text-white font-semibold text-xs sm:text-sm shadow-md shadow-rose-300/50 mb-2 backdrop-blur-md"
-        >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-rose-300/50 mb-2 backdrop-blur-md">
           <PartyPopper className="w-3.5 h-3.5 animate-bounce" />
           <span>SHE SAID YES! Best Day Ever! 🎉</span>
-          <Stars className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
-        </motion.div>
+          <PartyPopper className="w-3.5 h-3.5 animate-bounce" />
+        </div>
 
-        {/* Main Attraction: Happy Birthday Meganya! ❤️🎂 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.88 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.7, type: "spring", stiffness: 120 }}
-          className="mb-1"
-        >
-          <h1 className="font-script text-3xl sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-pink-500 to-amber-500 drop-shadow-md glow-text-pink leading-tight py-1">
-            Happy Birthday Meganya! ❤️🎂
+        {/* Main Attraction: Happy Birthday Meganya! - Rich Vibrant Typography */}
+        <div className="mb-1">
+          <h1 className="font-script text-5xl sm:text-7xl font-extrabold rose-gradient-text glow-text-pink leading-tight py-1">
+            Happy Birthday Meganya!
           </h1>
-        </motion.div>
+        </div>
 
-        {/* Golden Sub-header Sparkle */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="flex items-center justify-center gap-2 text-amber-500 font-display text-xs sm:text-base font-bold tracking-wide mb-1"
-        >
-          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+        {/* Golden Sub-header Sparkle with Crown Icon */}
+        <div className="flex items-center justify-center gap-2 text-amber-600 font-display text-xs sm:text-base font-bold tracking-wide mb-1">
+          <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+          <Crown className="w-4 h-4 text-amber-500 inline-block" />
           <span className="glow-text-gold">Celebrating The Queen Of My Heart</span>
-          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
-        </motion.div>
+          <Crown className="w-4 h-4 text-amber-500 inline-block" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+        </div>
 
         {/* Interactive Animated Birthday Cake */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
-        >
+        <div>
           <BirthdayCake />
-        </motion.div>
+        </div>
 
         {/* Romantic Letter / Secondary Message Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.6 }}
-          className="relative mx-auto mt-2 max-w-lg romantic-glass rounded-2xl p-4 sm:p-6 text-center border-2 border-rose-300/80 shadow-xl backdrop-blur-xl"
-        >
+        <div className="relative mx-auto mt-2 max-w-lg romantic-glass rounded-2xl p-4 sm:p-6 text-center border-2 border-rose-300/80 shadow-xl backdrop-blur-xl">
           {/* Decorative Corner Ribbons */}
           <div className="absolute top-2 left-3 text-rose-400 text-sm">🌹</div>
           <div className="absolute top-2 right-3 text-rose-400 text-sm">🌹</div>
@@ -130,15 +103,10 @@ export default function CelebrationPage({ onReset }) {
           <p className="mt-2 text-xs text-rose-700/80 font-medium">
             Forever yours, with all my love & devotion 💕
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Buttons: Pop more confetti, or Replay */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.55 }}
-          className="flex flex-wrap items-center justify-center gap-2.5 mt-4 pb-4"
-        >
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mt-3 sm:mt-4 pb-4">
           <button
             onClick={fireConfetti}
             className="flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs sm:text-sm shadow-md hover:scale-105 active:scale-95 transition-all shadow-rose-300/50 cursor-pointer whitespace-nowrap"
@@ -154,8 +122,8 @@ export default function CelebrationPage({ onReset }) {
             <RefreshCw className="w-3.5 h-3.5" />
             <span>Relive The Proposal 💍</span>
           </button>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
