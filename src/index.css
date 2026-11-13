@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom romantic glow & animations */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.18); }
+  70% { transform: scale(1); }
+}
+
+.animate-heartbeat {
+  animation: heartBeat 1.8s infinite ease-in-out;
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #ff9800) drop-shadow(0 0 16px #ff5722);
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ffc107) drop-shadow(0 0 24px #ff5722);
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px #ff9800) drop-shadow(0 0 14px #ff3d00);
+  }
+  75% {
+    transform: scale(1.04, 1.02) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ffeb3b) drop-shadow(0 0 20px #ff5722);
+  }
+}
+
+.animate-candle-flame {
+  animation: flameFlicker 1.2s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+@keyframes rosePetalFall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) translateX(120px) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Glowing text effects */
+.glow-text-pink {
+  text-shadow: 0 0 15px rgba(255, 77, 141, 0.6), 0 0 30px rgba(255, 77, 141, 0.4), 0 0 50px rgba(244, 63, 94, 0.3);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 179, 0, 0.5);
+}
+
+.romantic-glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 50px rgba(225, 29, 72, 0.08), 0 10px 20px rgba(244, 63, 94, 0.06);
+}
+
+.romantic-glass-dark {
+  background: rgba(255, 240, 245, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 182, 193, 0.6);
+  box-shadow: 0 25px 60px rgba(225, 29, 72, 0.15);
+}
