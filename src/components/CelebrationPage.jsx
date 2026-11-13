@@ -39,7 +39,7 @@ export default function CelebrationPage({ onReset }) {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 z-10 overflow-x-hidden selection:bg-rose-200">
+    <div className="relative min-h-[100dvh] flex flex-col items-center justify-center px-3 sm:px-4 py-5 sm:py-8 z-10 overflow-x-hidden selection:bg-rose-200">
       {/* Background Fireworks */}
       <Fireworks />
 
@@ -61,22 +61,22 @@ export default function CelebrationPage({ onReset }) {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/90 text-white font-semibold text-xs sm:text-sm shadow-md shadow-rose-300/50 mb-3 backdrop-blur-md"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-rose-500/90 to-pink-500/90 text-white font-semibold text-xs sm:text-sm shadow-md shadow-rose-300/50 mb-2 backdrop-blur-md"
         >
-          <PartyPopper className="w-4 h-4 animate-bounce" />
+          <PartyPopper className="w-3.5 h-3.5 animate-bounce" />
           <span>SHE SAID YES! Best Day Ever! 🎉</span>
-          <Stars className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
+          <Stars className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
         </motion.div>
 
-        {/* Main Attraction: Happy Birthday Jeevitha! ❤️🎂 */}
+        {/* Main Attraction: Happy Birthday Meganya! ❤️🎂 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.88 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.7, type: "spring", stiffness: 120 }}
           className="mb-1"
         >
-          <h1 className="font-script text-4xl sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-pink-500 to-amber-500 drop-shadow-md glow-text-pink leading-tight py-1">
-            Happy Birthday Jeevitha! ❤️🎂
+          <h1 className="font-script text-3xl sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-pink-500 to-amber-500 drop-shadow-md glow-text-pink leading-tight py-1">
+            Happy Birthday Meganya! ❤️🎂
           </h1>
         </motion.div>
 
@@ -85,11 +85,11 @@ export default function CelebrationPage({ onReset }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center justify-center gap-2 text-amber-500 font-display text-sm sm:text-lg font-bold tracking-wide mb-2"
+          className="flex items-center justify-center gap-2 text-amber-500 font-display text-xs sm:text-base font-bold tracking-wide mb-1"
         >
-          <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
           <span className="glow-text-gold">Celebrating The Queen Of My Heart</span>
-          <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
         </motion.div>
 
         {/* Interactive Animated Birthday Cake */}
@@ -106,7 +106,7 @@ export default function CelebrationPage({ onReset }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.6 }}
-          className="relative mx-auto mt-3 max-w-lg romantic-glass rounded-2xl p-5 sm:p-6 text-center border-2 border-rose-300/80 shadow-xl backdrop-blur-xl"
+          className="relative mx-auto mt-2 max-w-lg romantic-glass rounded-2xl p-4 sm:p-6 text-center border-2 border-rose-300/80 shadow-xl backdrop-blur-xl"
         >
           {/* Decorative Corner Ribbons */}
           <div className="absolute top-2 left-3 text-rose-400 text-sm">🌹</div>
@@ -114,20 +114,20 @@ export default function CelebrationPage({ onReset }) {
           <div className="absolute bottom-2 left-3 text-rose-400 text-sm">🌹</div>
           <div className="absolute bottom-2 right-3 text-rose-400 text-sm">🌹</div>
 
-          <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-rose-100 text-rose-600 mb-2">
-            <Heart className="w-4 h-4 fill-rose-500 animate-heartbeat" />
+          <div className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-rose-100 text-rose-600 mb-1.5">
+            <Heart className="w-3.5 h-3.5 fill-rose-500 animate-heartbeat" />
           </div>
 
-          <h2 className="font-handwriting text-xl sm:text-2xl text-rose-600 font-bold mb-2">
+          <h2 className="font-handwriting text-lg sm:text-2xl text-rose-600 font-bold mb-1.5">
             From My Heart To Yours
           </h2>
 
           {/* User's exact secondary message */}
-          <blockquote className="font-display italic text-sm sm:text-base text-gray-800 leading-relaxed px-2 py-2 border-y border-rose-200/80">
+          <blockquote className="font-display italic text-xs sm:text-base text-gray-800 leading-relaxed px-2 py-1.5 border-y border-rose-200/80">
             "You're the most beautiful part of my life. Every moment with you is special. Keep smiling and stay happy forever. ❤️"
           </blockquote>
 
-          <p className="mt-2.5 text-xs text-rose-700/80 font-medium">
+          <p className="mt-2 text-xs text-rose-700/80 font-medium">
             Forever yours, with all my love & devotion 💕
           </p>
         </motion.div>
@@ -137,11 +137,11 @@ export default function CelebrationPage({ onReset }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.55 }}
-          className="flex flex-wrap items-center justify-center gap-3 mt-5 pb-6"
+          className="flex flex-wrap items-center justify-center gap-2.5 mt-4 pb-4"
         >
           <button
             onClick={fireConfetti}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs sm:text-sm shadow-md hover:scale-105 active:scale-95 transition-all shadow-rose-300/50 cursor-pointer"
+            className="flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs sm:text-sm shadow-md hover:scale-105 active:scale-95 transition-all shadow-rose-300/50 cursor-pointer whitespace-nowrap"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Launch More Confetti! 🎊</span>
@@ -149,7 +149,7 @@ export default function CelebrationPage({ onReset }) {
 
           <button
             onClick={onReset}
-            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/90 hover:bg-white text-rose-600 font-semibold text-xs sm:text-sm border border-rose-300 shadow-sm hover:scale-105 active:scale-95 transition-all backdrop-blur-md cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white/90 hover:bg-white text-rose-600 font-semibold text-xs sm:text-sm border border-rose-300 shadow-sm hover:scale-105 active:scale-95 transition-all backdrop-blur-md cursor-pointer whitespace-nowrap"
           >
             <RefreshCw className="w-3.5 h-3.5" />
             <span>Relive The Proposal 💍</span>

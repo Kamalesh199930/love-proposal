@@ -23,10 +23,10 @@ export default function BirthdayCake() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center my-6 select-none">
-      <div className="relative w-64 h-56 flex flex-col items-center justify-end">
+    <div className="flex flex-col items-center justify-center my-3 sm:my-5 select-none">
+      <div className="relative w-56 sm:w-64 h-48 sm:h-56 flex flex-col items-center justify-end">
         {/* Candles Row */}
-        <div className="flex justify-between w-40 mb-1 z-20 px-2">
+        <div className="flex justify-between w-36 sm:w-40 mb-1 z-20 px-2">
           {candlesLit.map((isLit, i) => (
             <div key={i} className="flex flex-col items-center relative">
               {/* Flame */}
@@ -42,75 +42,75 @@ export default function BirthdayCake() {
                 </div>
               )}
               {/* Candle Body */}
-              <div className="w-2.5 h-10 rounded-sm bg-gradient-to-r from-rose-300 via-pink-100 to-rose-300 shadow-sm border border-rose-200/50" />
+              <div className="w-2 sm:w-2.5 h-8 sm:h-10 rounded-sm bg-gradient-to-r from-rose-300 via-pink-100 to-rose-300 shadow-sm border border-rose-200/50" />
             </div>
           ))}
         </div>
 
         {/* Top Cake Tier */}
-        <div className="relative w-44 h-16 bg-gradient-to-r from-pink-200 via-rose-100 to-pink-200 rounded-t-2xl shadow-md border-t-4 border-white flex items-center justify-center overflow-hidden z-10">
+        <div className="relative w-36 sm:w-44 h-14 sm:h-16 bg-gradient-to-r from-pink-200 via-rose-100 to-pink-200 rounded-t-2xl shadow-md border-t-4 border-white flex items-center justify-center overflow-hidden z-10">
           {/* Icing Drips */}
           <div className="absolute top-0 inset-x-0 flex justify-around">
-            <span className="w-6 h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-7 h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-6 h-3 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-8 h-6 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-6 h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-5 sm:w-6 h-3 sm:h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-7 h-4 sm:h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-5 sm:w-6 h-3 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-8 h-4 sm:h-6 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-5 sm:w-6 h-3 sm:h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
           </div>
 
           {/* Strawberry / Cherry Toppings */}
-          <div className="flex gap-4 z-10 mt-1">
-            <span className="text-sm filter drop-shadow">🍓</span>
-            <span className="text-sm filter drop-shadow">🍒</span>
-            <span className="text-sm filter drop-shadow">🍓</span>
+          <div className="flex gap-3 sm:gap-4 z-10 mt-1">
+            <span className="text-xs sm:text-sm filter drop-shadow">🍓</span>
+            <span className="text-xs sm:text-sm filter drop-shadow">🍒</span>
+            <span className="text-xs sm:text-sm filter drop-shadow">🍓</span>
           </div>
 
           {/* Cream Ribbon */}
-          <div className="absolute bottom-1 inset-x-0 h-1.5 bg-rose-300/40"></div>
+          <div className="absolute bottom-1 inset-x-0 h-1 sm:h-1.5 bg-rose-300/40"></div>
         </div>
 
         {/* Bottom Cake Tier */}
-        <div className="relative w-56 h-20 bg-gradient-to-r from-rose-200 via-pink-100 to-rose-200 rounded-t-2xl shadow-lg border-t-4 border-white flex items-center justify-center overflow-hidden z-0 -mt-1">
+        <div className="relative w-48 sm:w-56 h-16 sm:h-20 bg-gradient-to-r from-rose-200 via-pink-100 to-rose-200 rounded-t-2xl shadow-lg border-t-4 border-white flex items-center justify-center overflow-hidden z-0 -mt-1">
           {/* Icing Drips */}
           <div className="absolute top-0 inset-x-0 flex justify-around">
-            <span className="w-8 h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-7 h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-9 h-6 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-8 h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
-            <span className="w-8 h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-8 h-4 sm:h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-7 h-3 sm:h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-7 sm:w-9 h-4 sm:h-6 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-8 h-3 sm:h-4 bg-white rounded-b-full shadow-sm -mt-1"></span>
+            <span className="w-6 sm:w-8 h-4 sm:h-5 bg-white rounded-b-full shadow-sm -mt-1"></span>
           </div>
 
-          <div className="flex gap-6 z-10 mt-2">
+          <div className="flex gap-4 sm:gap-6 z-10 mt-2">
             <span className="text-xs font-handwriting text-rose-500 font-bold tracking-widest uppercase">
-              Sweet Jeevitha
+              Sweet Meganya
             </span>
           </div>
 
           {/* Cream swirls at bottom */}
-          <div className="absolute bottom-0 inset-x-0 h-3 bg-gradient-to-r from-pink-300 via-rose-200 to-pink-300"></div>
+          <div className="absolute bottom-0 inset-x-0 h-2.5 sm:h-3 bg-gradient-to-r from-pink-300 via-rose-200 to-pink-300"></div>
         </div>
 
         {/* Cake Stand / Plate */}
-        <div className="w-64 h-3.5 bg-gradient-to-r from-amber-100 via-white to-amber-100 rounded-full shadow-lg border border-amber-200/60 z-0 -mt-0.5"></div>
+        <div className="w-56 sm:w-64 h-3 sm:h-3.5 bg-gradient-to-r from-amber-100 via-white to-amber-100 rounded-full shadow-lg border border-amber-200/60 z-0 -mt-0.5"></div>
       </div>
 
       {/* Interactive button to blow out or light candles */}
-      <div className="mt-4">
+      <div className="mt-3">
         {candlesLit.some((l) => l) ? (
           <button
             onClick={blowCandles}
-            className="text-xs md:text-sm font-medium px-4 py-1.5 rounded-full bg-rose-100/90 text-rose-700 hover:bg-rose-200 hover:scale-105 active:scale-95 transition-all shadow-sm border border-rose-300 flex items-center gap-1.5"
+            className="text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full bg-rose-100/90 text-rose-700 hover:bg-rose-200 hover:scale-105 active:scale-95 transition-all shadow-sm border border-rose-300 flex items-center gap-1.5 cursor-pointer"
           >
             <span>✨</span> Click to Blow the Candles & Make a Wish 🎂
           </button>
         ) : (
           <div className="flex flex-col items-center gap-1">
-            <p className="text-xs md:text-sm font-medium text-rose-700 font-handwriting text-base animate-bounce">
-              May all your wishes and sweetest dreams come true, Jeevitha! 🌟
+            <p className="text-xs sm:text-sm font-medium text-rose-700 font-handwriting text-base animate-bounce">
+              May all your wishes and sweetest dreams come true, Meganya! 🌟
             </p>
             <button
               onClick={relightCandles}
-              className="text-xs text-rose-500 underline hover:text-rose-700 transition"
+              className="text-xs text-rose-500 underline hover:text-rose-700 transition cursor-pointer"
             >
               Relight Candles 🕯️
             </button>
